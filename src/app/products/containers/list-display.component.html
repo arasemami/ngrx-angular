@@ -1,1 +1,7 @@
-<app-list-products></app-list-products>
+<app-list-products [searchValue]="searchValue$ | async"></app-list-products>
+
+
+
+<div *ngFor="let customer of customers; index as i; first as isFirst" style="display: inline-block;">
+    <app-list-customer></app-list-customer>
+</div>
